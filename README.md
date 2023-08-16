@@ -1,4 +1,4 @@
-# Clash
+![invalid_args_clash](https://github.com/propenster/Clash/assets/51266654/7650caf7-935b-4dfd-aace-b60faaec90fe)# Clash
 A simple to use, efficient, and full-featured Command Line Argument Parser library for C# .NET
 
 ### What is Clash?
@@ -65,8 +65,7 @@ First,
 ![invali![test_clash](https://github.com/propenster/Clash/assets/51266654/acf24023-21f5-4011-be11-14d115097e66)
 
 
-d_args_clash](https://github.com/propenster/Clash/assets/51266654/756d14b1-accf-4dec-879a-9b39e4cac066)
-
+![invalid_args_clash](https://github.com/propenster/Clash/assets/51266654/fd37e9fe-e80a-4c2e-904e-2db5abc24388)
 
 ### Do you have an issue?
 
