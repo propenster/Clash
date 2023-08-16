@@ -7,14 +7,15 @@ internal class Program
     {
         //Console.WriteLine("Hello, World!");
         var parser = new Parser();
-        while(true)
+        while (true)
         {
-            var cli = (Cli) parser.Parse<Cli>(args);
-
-            if(cli != null)
+            if (!parser.TryParse<Cli>(args, out var cli))
             {
-                ProcessCliArgs(cli);
+                return;
             }
+
+            ProcessCliArgs(cli);
+
 
         }
 

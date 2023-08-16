@@ -10,7 +10,8 @@ namespace Clash
 {
     public interface IParser
     {
-        object Parse<T>(string[] args) where T : class, new();
+        T Parse<T>(string[] args) where T : class, new();
+        bool TryParse<T>(string[] args, out T result) where T : class, new();
     }
     public class Parser : IParser
     {
@@ -18,7 +19,7 @@ namespace Clash
         {
 
         }
-        public object Parse<T>(string[] args) where T : class, new()
+        public T Parse<T>(string[] args) where T : class, new()
         {
             T result = new T();
             var sb = new StringBuilder();
@@ -84,6 +85,75 @@ namespace Clash
             return result;
 
         }
+
+        public bool TryParse<T>(string[] args, out T result ) where T : class, new()
+        {
+            result = new T();
+            var sb = new StringBuilder();
+            var arguments = args.Select(x => string.Format("{0}{1}", x, "#")).ToArray();
+            sb.Append(string.Join("#", args));
+            sb.Append("#");
+            var argsArrayString = sb.ToString();
+
+            foreach (var prop in result.GetType().GetProperties())
+            {
+                var attrib = prop.GetCustomAttributes().OfType<ArgAttribute>().FirstOrDefault();
+                if (attrib == null) continue;
+
+                if (args.Length == 1)//probably default tags...
+                {
+                    //check for default tags... help, version, about etc...
+                    Console.WriteLine(HandleDefaultArgs(result, args.FirstOrDefault()));
+
+                    return false;
+
+                }
+
+                var matches = Regex.Matches(argsArrayString, @"-(?<variableType>\w)\#(?<variableValue>\S+)");
+                if (matches.Count == 0) continue;
+
+                var splitSlash = argsArrayString.Trim().Replace("\n", "").Split('-').Where(x => !string.IsNullOrWhiteSpace(x));
+
+                var interestValue = splitSlash.FirstOrDefault(c => c.ToLowerInvariant()[0] == attrib.Short.ToLowerInvariant()[0]);
+                if (string.IsNullOrWhiteSpace(interestValue)) continue;
+                var matchActualValue = Regex.Matches(interestValue, @"(?<variableType>\w)#(?<variableValue>.*?)#");
+
+                if (matchActualValue != null && matchActualValue.Count > 0)
+                {
+                    var targetString = matchActualValue.Cast<Match>().Select(x => x.Groups["variableValue"].Value).FirstOrDefault();
+                    if (!string.IsNullOrWhiteSpace(targetString))
+                    {
+                        var value = Convert.ChangeType(targetString, prop.PropertyType);
+                        prop.SetValue(result, value, null);
+                        continue;
+                    }
+                }
+
+            }
+
+            //check for errors...
+            //properties that are required but value couldn't be set for them
+            var errorString = string.Empty;
+            var res = result;
+            var props = res.GetType().GetProperties().Where(x => x.GetValue(res, null) == null && x.GetCustomAttributes().OfType<ArgAttribute>().FirstOrDefault()?.Required == true);
+            if (props != null && props.Any())
+            {
+                Console.Clear();
+                var helpString = HelpString(res);
+                sb.Clear();
+                sb.AppendLine(string.Format("{0} for these arguments [{1}] \n{2}", "Invalid arguments and/or values", string.Join(", ", props.Select(x => $"*--{x.GetCustomAttributes().OfType<ArgAttribute>().FirstOrDefault()?.Long.ToLowerInvariant()} or -{x.GetCustomAttributes().OfType<ArgAttribute>().FirstOrDefault()?.Short.ToLowerInvariant()}*")), helpString));
+                errorString = sb.ToString();
+
+                Console.WriteLine(errorString);
+
+                return false;
+            }
+            //break cli_args into tokens... and attach tokens to object value...
+
+            return true;
+
+        }
+
 
         private string HandleDefaultArgs(object t, string v)
         {
