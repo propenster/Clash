@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TestClash": {
+      "commandName": "Project",
+      "commandLineArgs": "--help"
+    }
+  }
+}
