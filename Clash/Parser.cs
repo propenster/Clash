@@ -98,6 +98,10 @@ namespace Clash
                 case "--version":
                     return VersionString(t);
 
+                case "-a":
+                case "--authors":
+                    return AuthorString(t);
+
                 default:
                     return string.Format("Invalid Arguments \n{0}", HelpString(t));
 
@@ -148,7 +152,7 @@ Options:
                 ?? $"Description for {p.Name.ToLowerInvariant()}", p.GetCustomAttributes().OfType<ArgAttribute>().FirstOrDefault()?.DefaultValue == null ? string.Empty : $"[default: {p.GetCustomAttributes().OfType<ArgAttribute>().FirstOrDefault()?.DefaultValue}]"
                 )));
 
-            var helpAndVersion = string.Format("{0}\n{1}", "-h, --help <HELP> Print help", $"-V, --version <VERSION> Print version");
+            var helpAndVersion = string.Format("{0}\n{1}\n{2}", "-h, --help <HELP> Print help", $"-V, --version <VERSION> Print version", $"-A, --author <AUTHOR> Print author(s)");
 
             sb.Append(string.Format(@"{0}: {1}[EXE] OPTIONS {2}", "Usage", appName, argNameArryString));
 
@@ -179,6 +183,18 @@ Options:
             var appName = Assembly.GetEntryAssembly().GetName().Name;
 
             sb.AppendLine(string.Format("{0} {1}", appName, isValidObj?.Version));
+
+            return sb.ToString();
+        }
+        public string AuthorString(object obj)
+        {
+            var sb = new StringBuilder();
+
+            var isValidObj = obj.GetType().GetCustomAttributes(true).OfType<CommandAttribute>().FirstOrDefault();
+            if (isValidObj == null) return string.Empty; //Parseable object must impelement the CommandAttribute
+            //get appName
+
+            sb.AppendLine(string.Format("{0} [{1}]", "Author(s)", isValidObj?.Author));
 
             return sb.ToString();
         }
