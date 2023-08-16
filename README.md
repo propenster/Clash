@@ -62,7 +62,9 @@ First,
 
 ## See images below for some better context
 
-![test_clash](https://github.com/propenster/Clash/assets/51266654/acf24023-21f5-4011-be11-14d115097e66)
+![clash_authors](https://github.com/propenster/Clash/assets/51266654/f0fee4ba-5654-4189-a818-6d5f9a5592ad)
+
+
 
 
 ![invalid_args_clash](https://github.com/propenster/Clash/assets/51266654/fd37e9fe-e80a-4c2e-904e-2db5abc24388)
