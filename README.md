@@ -62,10 +62,10 @@ First,
 
 ## See images below for some better context
 
-![cliParserCSharp](https://github.com/propenster/Clash/assets/51266654/2fe9cea5-2321-4189-879e-9cfdcb125feb)
+![invali![test_clash](https://github.com/propenster/Clash/assets/51266654/acf24023-21f5-4011-be11-14d115097e66)
 
 
-![invalid_args_clash](https://github.com/propenster/Clash/assets/51266654/756d14b1-accf-4dec-879a-9b39e4cac066)
+d_args_clash](https://github.com/propenster/Clash/assets/51266654/756d14b1-accf-4dec-879a-9b39e4cac066)
 
 
 ### Do you have an issue?
