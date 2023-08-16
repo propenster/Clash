@@ -52,6 +52,19 @@ First,
 
   var parser = new Parser();
   var cli = parser.Parse<Cli>(args);
+  ProcessCliArgs(cli);
+
+```
+
+### Alternatively, You can use the TryParseMethod
+
+```csharp
+            if (!parser.TryParse<Cli>(args, out var cli))
+            {
+                return;
+            }
+             ProcessCliArgs(cli);
+
 ```
 
 * You can now do anything with the cli object. All the fields (args) will have been filled with values from the cmd args. If there is an error or invalid arguments, an error response will be sent the STDOUT buffer
