@@ -7,7 +7,7 @@ You can use Clash in your CLI applications to parse CommandLine Arguments to C# 
 
 ### Where can I get it?
 
-First, [install NuGet](http://docs.nuget.org/docs/start-here/installing-nuget). Then, install [FakerLib.Net](https://www.nuget.org/packages/FakerLib.Net/) from the package manager console:
+First, [install NuGet](http://docs.nuget.org/docs/start-here/installing-nuget). Then, install [Clash](https://www.nuget.org/packages/Clash/) from the package manager console:
 
 ```
 PM> Install-Package Clash
