@@ -84,7 +84,7 @@ First,
 
 ### Do you have an issue?
 
-If you're facing some problems using the package, file an issue above.
+If you're facing some problems using the package, file an [issue](https://github.com/propenster/Clash/issues) above.
 
 ### License, etc.
 FakerLib.Net is Copyright &copy; 2023 [Faith Olusegun](https://github.com/propenster) and other contributors under the [MIT license](https://github.com/propenster/Clash/blob/main/LICENSE).
