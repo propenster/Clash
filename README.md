@@ -73,6 +73,8 @@ First,
   ProcessCliArgs(cli);
 ```
 
+### You can also check [Examples](https://github.com/propenster/Clash/tree/main/examples) folder for code samples.
+
 ## See images below for some better context
 
 ![clash_authors](https://github.com/propenster/Clash/assets/51266654/f0fee4ba-5654-4189-a818-6d5f9a5592ad)
