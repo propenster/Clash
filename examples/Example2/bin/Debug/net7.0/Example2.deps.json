@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Example2/1.0.0": {
+        "dependencies": {
+          "Clash": "1.0.2"
+        },
+        "runtime": {
+          "Example2.dll": {}
+        }
+      },
+      "Clash/1.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Clash.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Example2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Clash/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0zK9+Tz2gf2JpK9bqgVa6r1x+vOaeWGTVbvLIo6A+dwHerBoM1GJhxBVsgxVSMw8QZGiCvhJgGDmqtJhHvYdlg==",
+      "path": "clash/1.0.2",
+      "hashPath": "clash.1.0.2.nupkg.sha512"
+    }
+  }
+}

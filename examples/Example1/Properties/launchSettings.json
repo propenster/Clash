@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Example1": {
+      "commandName": "Project",
+      "commandLineArgs": "-f \"C:\\temp\\myfile.json\""
+    }
+  }
+}

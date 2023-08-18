@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "9uTEgz2jJE1w5AfFkxYROCTrTLDNH+AFl9BkNh59FoTtwFk42i/xF84JzDcBPY1ww1BJQI06911F7Gi0bynjgg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\faith.olusegun\\source\\repos\\Clash\\examples\\Example2\\Example2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\faith.olusegun\\.nuget\\packages\\clash\\1.0.2\\clash.1.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

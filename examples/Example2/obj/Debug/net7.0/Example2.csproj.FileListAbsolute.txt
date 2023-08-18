@@ -1,0 +1,17 @@
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\bin\Debug\net7.0\Example2.exe
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\bin\Debug\net7.0\Example2.deps.json
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\bin\Debug\net7.0\Example2.runtimeconfig.json
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\bin\Debug\net7.0\Example2.dll
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\bin\Debug\net7.0\Example2.pdb
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\bin\Debug\net7.0\Clash.dll
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\Example2.csproj.AssemblyReference.cache
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\Example2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\Example2.AssemblyInfoInputs.cache
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\Example2.AssemblyInfo.cs
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\Example2.csproj.CoreCompileInputs.cache
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\Example2.csproj.CopyComplete
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\Example2.dll
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\refint\Example2.dll
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\Example2.pdb
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\Example2.genruntimeconfig.cache
+C:\Users\faith.olusegun\source\repos\Clash\examples\Example2\obj\Debug\net7.0\ref\Example2.dll

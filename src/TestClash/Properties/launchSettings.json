@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "TestClash": {
+      "commandName": "Project",
+      "commandLineArgs": "--name \"Faith olusegun\" --count 89 --address \"182.128.323.01\""
+    }
+  }
+}
